@@ -6,10 +6,12 @@ import hello.hellospring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
 //@Service    // 스프링이 올라올 때 등록해 줌
+@Transactional  // JPA를 쓸 때는 항상 Transactional이 있어야 함 
 public class MemberService {
 
     private MemberRepository memberRepository;
