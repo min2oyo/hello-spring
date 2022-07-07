@@ -9,12 +9,13 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service    // 스프링이 올라올 때 등록해 줌
+//@Service    // 스프링이 올라올 때 등록해 줌
 public class MemberService {
 
-    private final MemberRepository memberRepository;
+    private MemberRepository memberRepository;
 
-    @Autowired  // MemberRepository가 필요함을 인식
+
+//    @Autowired  // MemberRepository가 필요함을 인식
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
