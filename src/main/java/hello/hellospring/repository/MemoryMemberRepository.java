@@ -6,9 +6,13 @@ import java.util.*;
 
 public class MemoryMemberRepository implements MemberRepository {
 
+    // 객체
     private static Map<Long, Member> store = new HashMap<>();
+
+    // 변수
     private static long sequence = 0L;
 
+    // 메서드
     @Override
     public Member save(Member member) {
         member.setId(++sequence);
